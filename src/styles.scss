@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .header-block {
+        position: relative;
+        header{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 1rem 0.5rem 1rem ;
+            position: sticky;
+            div:first-child{
+               // border: 1px solid green;
+                flex: 1;
+                padding-right: 0.5rem;
+            }
+            div:nth-child(2n){
+                border: 1px solid red;
+                flex:4;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+            div:last-child{
+                flex:1
+            }
+        }
+    }
+    .main-block{
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        .sub-block-1{
+            background-color: #ddd;
+            padding: 1rem 0.5rem 0.5rem 1rem;
+            flex: 1;
+        }
+        .sub-block-2{
+            padding: 1rem;
+            flex: 5;    
+        }
+    }
+}

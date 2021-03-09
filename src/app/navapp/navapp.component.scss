@@ -1,0 +1,16 @@
+nav{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .b-list{
+        flex: 1;
+        border: 1px solid green;
+        ul{
+            list-style: none;
+        }
+    }
+    footer{
+        margin-top: 0.2rem;
+        border: 1px solid blue;
+    }
+}

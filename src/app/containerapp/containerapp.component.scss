@@ -1,0 +1,21 @@
+main{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    .open-chanel-help-block{
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    .sec-1{
+        flex: 3;
+        border: 1px solid blue;
+        padding: 0.5rem;
+        margin-right: 0.2rem;
+    }
+    .sec-2{
+        flex: 1;
+        border: 1px solid green;
+        padding: 0.5rem;
+    }
+}
