@@ -1,13 +1,28 @@
-h1{
-    font-size: 1.2rem;
-    font-weight: 600;
-
-    span{
-        display: block;
-        text-align: center;
-    }
-    span:last-child{
+    h1{
+        margin: 0;
+        padding: 0;
         font-size: 1rem;
-        font-weight: normal;
+        letter-spacing: 2px;
+        font-weight: 600;
+        span{
+            display: block;
+            text-align: center;
+        }
+        span:last-child{
+            font-size: 0.8rem;
+            font-weight: normal;
+        }
     }
-}
+    .b-form-search{
+        form{
+            flex:1;
+            input{
+                width: 100%;
+                border: none;
+                height: 3rem;
+                outline: 0;
+                padding-left: 0.5rem;
+            }
+        }
+        
+    }
