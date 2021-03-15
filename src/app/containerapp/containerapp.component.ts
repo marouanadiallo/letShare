@@ -8,7 +8,7 @@ import Comment from '../../interfaces/Comment'
 })
 export class ContainerappComponent implements OnInit {
 
-  public comments: Comment[]; 
+  public comments: Comment[];
   constructor(private commentService: CommentService) { }
 
   ngOnInit(): void {
