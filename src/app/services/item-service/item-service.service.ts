@@ -31,6 +31,15 @@ export class ItemService {
     );
   }
 
+  deleteItem(item: Item | number): Observable<Item> {
+    const id = typeof item === 'number' ? item : item.id;
+    const url = `${this.apiUrl}/${id}`;
+
+    return this.http.delete<Item>(url, this.httpOptions).pipe(
+      catchError(this.handleError<Item>('deleteItem'))
+    );
+  }
+
   // tslint:disable-next-line:typedef
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
