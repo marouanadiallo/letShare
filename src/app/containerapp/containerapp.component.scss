@@ -12,14 +12,5 @@ main{
         border: 1px solid blue;
         padding: 0.5rem;
         margin-right: 0.2rem;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-    .sec-2{
-        flex: 1;
-        border: 1px solid green;
-        padding: 0.5rem;
     }
 }

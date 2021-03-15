@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CommentService} from '../../services/comment.service'
-import Comment from '../../interfaces/Comment'
+import {CommentService} from '../services/comment.service'
+import Comment from '../interfaces/Comment'
 @Component({
   selector: 'app-containerapp',
   templateUrl: './containerapp.component.html',
