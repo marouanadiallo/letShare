@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {CommentService} from '../../services/comment.service'
+import Comment from '../../interfaces/Comment'
 @Component({
   selector: 'app-containerapp',
   templateUrl: './containerapp.component.html',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerappComponent implements OnInit {
 
-  constructor() { }
+  public comments: Comment[]; 
+  constructor(private commentService: CommentService) { }
 
   ngOnInit(): void {
+    this.comments = this.commentService.getComments();
+    console.log(this.comments);
   }
 
 }

@@ -1,5 +1,5 @@
 export default interface Comment {
     id: number
-    nam:string,
+    name:string,
     content: string,
 }
