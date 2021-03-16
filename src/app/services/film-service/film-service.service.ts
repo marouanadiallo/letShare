@@ -37,6 +37,14 @@ export class FilmService {
     return this.http.get<Film>(url);
   }
 
+  getFilmByName(name: string): Observable<Film[]>{
+    return this.http.get<Film[]>(this.apiUrl).pipe(
+      map(item => {
+        return item.filter(elem => elem.name.includes(name));
+      })
+    );
+  }
+
   addFilm(film: Film): Observable<Film>{
     return this.http.post<Film>(this.apiUrl, film, this.httpOptions)
       .pipe(
@@ -44,6 +52,11 @@ export class FilmService {
     );
   }
 
+  updateFilm(film: Film) :Observable<Film>{
+    return this.http.put(this.apiUrl, film, this.httpOptions).pipe(
+      catchError(this.handleError<any>('updateHero'))
+    );
+  }
   deleteFilm(film: Film | number): Observable<Film> {
     const id = typeof film === 'number' ? film : film.id;
     const url = `${this.apiUrl}/${id}`;

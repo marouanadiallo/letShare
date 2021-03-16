@@ -23,13 +23,7 @@ export class CreateFilmComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    console.log(this.form.valid);
-    console.log(this.form);
-
-
-    if (this.form.valid){
-      console.log('valid');
-
+     if (this.form.valid){
       const value = this.form.value;
       this.filmService.addFilm(
         {

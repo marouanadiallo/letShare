@@ -18,13 +18,14 @@ import { HoverDirective } from './film/hover.directive';
 import {  RouterModule, Routes } from '@angular/router';
 import { VideothequeFavoritesComponent } from './videotheque-favorites/videotheque-favorites.component';
 import { CreateFilmComponent } from './create-film/create-film.component';
-
+import {EditFilmComponent} from './edit-film/edit-film.component';
 
 const APP_ROUTES: Routes = [
   {path: '', component: VideothequeComponent},
   {path: 'film/:id', component: FilmDetailsComponent},
   {path: 'favorites', component: VideothequeFavoritesComponent},
-  {path: 'create-film', component: CreateFilmComponent}
+  {path: 'create-film', component: CreateFilmComponent},
+  {path: 'edit-film/:id', component: EditFilmComponent}
 ];
 // @ts-ignore
 @NgModule({
@@ -38,7 +39,8 @@ const APP_ROUTES: Routes = [
     FilmDetailsComponent,
     HoverDirective,
     VideothequeFavoritesComponent,
-    CreateFilmComponent
+    CreateFilmComponent,
+    EditFilmComponent
   ],
   imports: [
     BrowserModule,

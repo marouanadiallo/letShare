@@ -2,6 +2,6 @@
   <h4 class="header-card">{{film.id}}</h4>
   <div class="b-content-card">{{film.name}}</div>
   <div class="option-card">
-    <button class="btn">{{film.isFavorite ? 'delete fav': 'add fav'}}</button>
+    <button class="btn" (click)='toggleFavorite($event)'>{{film.isFavorite ? 'delete fav': 'add fav'}}</button>
   </div>
 </div>
