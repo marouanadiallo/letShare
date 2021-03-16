@@ -11,7 +11,7 @@
                 <input type="text" formControlName="description" id="descripition">
             </div>
             <div>
-                <button class="btn btn-primary">Create</button>
+                <button [disabled]='form.invalid' class="btn btn-primary">Create</button>
             </div>
         </form>
     </div>
