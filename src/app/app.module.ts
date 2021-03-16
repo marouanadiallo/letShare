@@ -19,6 +19,7 @@ import {  RouterModule, Routes } from '@angular/router';
 import { VideothequeFavoritesComponent } from './videotheque-favorites/videotheque-favorites.component';
 import { CreateFilmComponent } from './create-film/create-film.component';
 import {EditFilmComponent} from './edit-film/edit-film.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const APP_ROUTES: Routes = [
   {path: '', component: VideothequeComponent},
@@ -52,7 +53,8 @@ const APP_ROUTES: Routes = [
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}
-    )
+    ),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,7 +7,12 @@
 }
 .b-filter-add-item{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
   margin-right: 1rem;
   margin-bottom: 0.3rem;
+  .b-btn-create{
+    display: flex;
+    justify-content: flex-end;
+  }
 }

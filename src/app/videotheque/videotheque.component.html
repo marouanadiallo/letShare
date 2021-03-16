@@ -1,10 +1,9 @@
-<div class="b-filter-add-item">
-  
-  <div>
+<div >
+  <div class="b-filter-add-item">
+    <div class="b-btn-create">
+      <button class="btn-own btn-primary-own" routerLink="create-film">add item</button>
+    </div>
     <app-film [routerLink] = "['film', filmRandom.id]"  [film]="filmRandom"></app-film>
-  </div>
-  <div>
-    <button class="btn btn-primary" routerLink="create-film">add item</button>
   </div>
 </div>
 <hr>

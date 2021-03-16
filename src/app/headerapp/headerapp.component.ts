@@ -21,7 +21,6 @@ export class HeaderappComponent implements OnInit {
    {
      this.filmService.getFilmByName(ref.value).subscribe(films => this.films=films);
      console.log(this.films);
-     
    }
   }
 }

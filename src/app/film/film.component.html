@@ -2,6 +2,7 @@
   <h4 class="header-card">{{film.id}}</h4>
   <div class="b-content-card">{{film.name}}</div>
   <div class="option-card">
-    <button class="btn" (click)='toggleFavorite($event)'>{{film.isFavorite ? 'delete fav': 'add fav'}}</button>
+    <ngb-rating [rate]="3"></ngb-rating>
+    <button class="btn-own" (click)='toggleFavorite($event)'>{{film.isFavorite ? 'delete fav': 'add fav'}}</button>
   </div>
 </div>
