@@ -1,0 +1,9 @@
+<div class="b-filter-add-item">
+  <div></div>
+  <div>
+    <button class="btn btn-primary" routerLink="create-film">add item</button>
+  </div>
+</div>
+<div class="b-items">
+  <app-film [routerLink] = "['film', film.id]" *ngFor="let film of videotheque" [film]="film"></app-film>
+</div>

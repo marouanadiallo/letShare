@@ -1,14 +1,14 @@
 <div>
     <div class="b-form">
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            <h4>Create Item</h4>
+            <h4>Create Film</h4>
             <div class="b-form-field">
                 <label for="name">Name</label>
                 <input type="text" formControlName="name" id="name"/>
             </div>
             <div class="b-form-field">
-                <label for="description">descripition</label>
-                <input type="text" formControlName="description" id="descripition">
+                <label for="description">description</label>
+                <input type="text" formControlName="description" id="description">
             </div>
             <div>
                 <button [disabled]='form.invalid' class="btn btn-primary">Create</button>

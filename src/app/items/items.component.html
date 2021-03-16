@@ -1,9 +1,0 @@
-<div class="b-filter-add-item">
-  <div></div>
-  <div>
-    <button class="btn btn-primary" routerLink="create-item">add item</button>
-  </div>
-</div>
-<div class="b-items">
-  <app-item [routerLink] = "['items', item.id]" *ngFor="let item of items" [item]="item"></app-item>
-</div>

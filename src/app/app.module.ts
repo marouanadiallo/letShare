@@ -1,9 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data-service/in-memory-data.service';
@@ -14,22 +11,21 @@ import { NavappComponent } from './navapp/navapp.component';
 import { HeaderappComponent } from './headerapp/headerapp.component';
 import { ContainerappComponent } from './containerapp/containerapp.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ItemComponent } from './item/item.component';
-import { ItemsComponent } from './items/items.component';
-import { ItemDetailsComponent } from './item-details/item-details.component';
-import { HoverDirective } from './item/hover.directive';
+import { FilmComponent } from './film/film.component';
+import { VideothequeComponent } from './videotheque/videotheque.component';
+import { FilmDetailsComponent } from './film-details/film-details.component';
+import { HoverDirective } from './film/hover.directive';
 import {  RouterModule, Routes } from '@angular/router';
-import { ItemsFavoritesComponent } from './items-favorites/items-favorites.component';
-import { CreateItemComponent } from './create-item/create-item.component';
+import { VideothequeFavoritesComponent } from './videotheque-favorites/videotheque-favorites.component';
+import { CreateFilmComponent } from './create-film/create-film.component';
 
 
-const APP_ROUTES : Routes = [
-  {path:'', component: ItemsComponent},
-  {path:'items/:id', component: ItemDetailsComponent},
-  {path:'favorites', component: ItemsFavoritesComponent},
-  {path:'create-item', component: CreateItemComponent}
-]
-// @ts-ignore
+const APP_ROUTES: Routes = [
+  {path: '', component: VideothequeComponent},
+  {path: 'film/:id', component: FilmDetailsComponent},
+  {path: 'favorites', component: VideothequeFavoritesComponent},
+  {path: 'create-film', component: CreateFilmComponent}
+];
 // @ts-ignore
 @NgModule({
   declarations: [
@@ -37,12 +33,12 @@ const APP_ROUTES : Routes = [
     NavappComponent,
     HeaderappComponent,
     ContainerappComponent,
-    ItemComponent,
-    ItemsComponent,
-    ItemDetailsComponent,
+    FilmComponent,
+    VideothequeComponent,
+    FilmDetailsComponent,
     HoverDirective,
-    ItemsFavoritesComponent,
-    CreateItemComponent
+    VideothequeFavoritesComponent,
+    CreateFilmComponent
   ],
   imports: [
     BrowserModule,
