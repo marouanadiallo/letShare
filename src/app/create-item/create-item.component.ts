@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ItemService } from '../services/item-service/item-service.service';
 
@@ -10,12 +10,14 @@ import { ItemService } from '../services/item-service/item-service.service';
 })
 export class CreateItemComponent implements OnInit {
   public form : FormGroup;
-  constructor(private itemService: ItemService, private router: Router) { }
+  constructor(private itemService: ItemService, 
+    private router: Router,
+    private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.form = new FormGroup({
-      name: new FormControl('', [Validators.required]),
-      description: new FormControl('', [Validators.required])
+    this.form = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      description: ['', [Validators.required]]
     })
   }
 
