@@ -1,1 +1,10 @@
-<p>item-details works!</p>
+<div>
+    <h4>{{item.name}}</h4>
+    <div>
+        {{item.description}}
+    </div>
+    <div class="detail-options">
+        <button class="btn btn-secondary" [routerLink] = "['/items', item.id]">Edit</button>
+        <button class="btn btn-danger" (click)="deleteItem()">Delete</button>
+    </div>
+</div>

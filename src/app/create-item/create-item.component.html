@@ -1,0 +1,18 @@
+<div>
+    <div class="b-form">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <h4>Create Item</h4>
+            <div class="b-form-field">
+                <label for="name">Name</label>
+                <input type="text" formControlName="name" id="name"/>
+            </div>
+            <div class="b-form-field">
+                <label for="description">descripition</label>
+                <input type="text" formControlName="description" id="descripition">
+            </div>
+            <div>
+                <button class="btn btn-primary">Create</button>
+            </div>
+        </form>
+    </div>
+</div>

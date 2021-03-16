@@ -1,7 +1,13 @@
 .b-items{
-  border: 1px solid green;
+  //border: 1px solid green;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+}
+.b-filter-add-item{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+  margin-bottom: 0.3rem;
 }

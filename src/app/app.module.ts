@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
@@ -17,8 +17,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ItemComponent } from './item/item.component';
 import { ItemsComponent } from './items/items.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { HoverDirective } from './item/hover.directive';
+import {  RouterModule, Routes } from '@angular/router';
+import { ItemsFavoritesComponent } from './items-favorites/items-favorites.component';
+import { CreateItemComponent } from './create-item/create-item.component';
 
 
+const APP_ROUTES : Routes = [
+  {path:'', component: ItemsComponent},
+  {path:'items/:id', component: ItemDetailsComponent},
+  {path:'favorites', component: ItemsFavoritesComponent},
+  {path:'create-item', component: CreateItemComponent}
+]
 // @ts-ignore
 // @ts-ignore
 @NgModule({
@@ -29,16 +39,18 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
     ContainerappComponent,
     ItemComponent,
     ItemsComponent,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    HoverDirective,
+    ItemsFavoritesComponent,
+    CreateItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
+    RouterModule.forRoot(APP_ROUTES),
     BrowserAnimationsModule,
-    MatSliderModule,
-    MatIconModule,
-    MatMenuModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}

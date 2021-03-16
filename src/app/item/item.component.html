@@ -1,8 +1,7 @@
-<div class="b-card">
+<div appHover class="b-card">
   <h4 class="header-card">{{item.id}}</h4>
   <div class="b-content-card">{{item.name}}</div>
   <div class="option-card">
-    <button>Editer</button>
-    <button>Supprimer</button>
+    <button class="btn">{{item.isFavorite ? 'delete fav': 'add fav'}}</button>
   </div>
 </div>

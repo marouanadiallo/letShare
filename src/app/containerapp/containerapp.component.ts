@@ -13,7 +13,7 @@ export class ContainerappComponent implements OnInit {
 
   ngOnInit(): void {
     this.comments = this.commentService.getComments();
-    console.log(this.comments);
+    //console.log(this.comments);
   }
 
 }

@@ -12,10 +12,10 @@ export class InMemoryDataService implements InMemoryDbService{
   // tslint:disable-next-line:typedef
   createDb(){
     const items: Item[] = [
-      {id: 11, name: 'Brahim'},
-      {id: 12, name: 'Marouane'},
-      {id: 13, name: 'Achraf'},
-      {id: 14, name: 'Mohamed'},
+      {id: 11, name: 'Brahim', isFavorite:true, description:"Une description de Brahim !"},
+      {id: 12, name: 'Marouane', isFavorite:true,  description: "une description de Marouana !"},
+      {id: 13, name: 'Achraf',  isFavorite:false, description: "une description d'Achraf !"},
+      {id: 14, name: 'Mohamed', isFavorite:false,  description: "une description de Mohamed !"},
     ];
     return{items};
   }

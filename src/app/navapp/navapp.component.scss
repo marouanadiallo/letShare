@@ -11,7 +11,20 @@ nav{
         .sub-menu {
             padding-left: 1rem;
             li{
-                padding-top: 0.5rem;
+                padding: 0.5rem 0 0.5rem 0.5rem;
+                margin-top: 0.2rem;
+                margin-bottom: 0.2rem;
+                border: 1px solid #5a656f;
+                outline: 0;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #5a656f;
+                }
+                
+            }
+            .active{
+                background-color: #5a656f;
+                border-right: 0.2rem solid white;
             }
         }
     }
